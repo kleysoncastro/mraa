@@ -113,6 +113,7 @@ set (mraa_LIB_ARM_SRCS_NOAUTO
   ${PROJECT_SOURCE_DIR}/src/arm/rockpie_v11.c
   ${PROJECT_SOURCE_DIR}/src/arm/adlink_ipi.c
   ${PROJECT_SOURCE_DIR}/src/arm/radxa_zero.c
+  ${PROJECT_SOURCE_DIR}/src/arm/radxa_rock3a.c
 )
 
 set (mraa_LIB_MIPS_SRCS_NOAUTO
