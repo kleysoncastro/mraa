@@ -16,12 +16,14 @@
 
 #define DT_BASE "/proc/device-tree"
 /*
+* "Radxa ROCK Pi 4C+" is the model name on stock 6.x kernels
 * "Radxa ROCK Pi 4" is the model name on stock 5.x kernels
-* "ROCK PI 4A", "ROCK PI 4B" and "ROCK PI 4C" is used on Radxa 4.4 kernel
+* "ROCK PI 4A", "ROCK PI 4B" and "ROCK PI 4C" and "ROCK PI 4C+" are used on Radxa 4.4 kernel
 * so we search for the string below by ignoring case
 */
 #define PLATFORM_NAME_ROCK_PI4 "ROCK Pi 4"
 #define PLATFORM_NAME_ROCK_PI4_2 "ROCK PI 4"
+#define PLATFORM_NAME_ROCK_PI4_3 "ROCK 4"
 #define MAX_SIZE 64
 
 const char* rockpi4_serialdev[MRAA_ROCKPI4_UART_COUNT] = { "/dev/ttyS2", "/dev/ttyS4" };
@@ -71,7 +73,8 @@ mraa_rockpi4()
     if (mraa_file_exist(DT_BASE "/model")) {
         // We are on a modern kernel, great!!!!
         if (mraa_file_contains(DT_BASE "/model", PLATFORM_NAME_ROCK_PI4)  ||
-            mraa_file_contains(DT_BASE "/model", PLATFORM_NAME_ROCK_PI4_2)
+            mraa_file_contains(DT_BASE "/model", PLATFORM_NAME_ROCK_PI4_2)||
+            mraa_file_contains(DT_BASE "/model", PLATFORM_NAME_ROCK_PI4_3)
             ) {
             b->platform_name = PLATFORM_NAME_ROCK_PI4;
             b->uart_dev[0].device_path = (char*) rockpi4_serialdev[0];
