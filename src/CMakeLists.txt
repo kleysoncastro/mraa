@@ -114,6 +114,7 @@ set (mraa_LIB_ARM_SRCS_NOAUTO
   ${PROJECT_SOURCE_DIR}/src/arm/adlink_ipi.c
   ${PROJECT_SOURCE_DIR}/src/arm/radxa_zero.c
   ${PROJECT_SOURCE_DIR}/src/arm/radxa_rock3a.c
+  ${PROJECT_SOURCE_DIR}/src/arm/radxa_rock3c.c
   ${PROJECT_SOURCE_DIR}/src/arm/radxa_cm3_io.c
 )
 
