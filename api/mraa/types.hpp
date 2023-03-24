@@ -60,6 +60,7 @@ typedef enum {
     MTK_LINKIT = 17,           /**< Mediatek MT7688 based Linkit boards */
     MTK_OMEGA2 = 18,           /**< MT7688 based Onion Omega2 board */
     IEI_TANK = 19,             /**< IEI Tank System*/
+    ROCKPI4 = 20,             /**< Radxa ROCK PI 4 Models A/B/C */
     INTEL_UPXTREME = 24,        /**< The UPXTREME Board */
 
     FTDI_FT4222 = 256,         /**< FTDI FT4222 USB to i2c bridge */
@@ -200,6 +201,39 @@ typedef enum {
     RASPBERRY_WIRING_PIN28 = 38,
     RASPBERRY_WIRING_PIN29 = 40
 } RaspberryWiring;
+
+/**
+ *  ROCKPI4 GPIO numbering enum
+ */
+typedef enum {
+    ROCKPI4_GPIO71 = 3,
+    ROCKPI4_GPIO72 = 5,
+    ROCKPI4_GPIO75 = 7,
+    ROCKPI4_GPIO148 = 8,
+    ROCKPI4_GPIO147 = 10,
+    ROCKPI4_GPIO146 = 11,
+    ROCKPI4_GPIO131 = 12,
+    ROCKPI4_GPIO150 = 13,
+    ROCKPI4_GPIO149 = 15,
+    ROCKPI4_GPIO154 = 16,
+    ROCKPI4_GPIO156 = 18,
+    ROCKPI4_GPIO40 = 19,
+    ROCKPI4_GPIO39 = 21,
+    ROCKPI4_GPIO157 = 22,
+    ROCKPI4_GPIO41 = 23,
+    ROCKPI4_GPIO42 = 24,
+    ROCKPI4_GPIO64 = 27,
+    ROCKPI4_GPIO65 = 28,
+    ROCKPI4_GPIO74 = 29,
+    ROCKPI4_GPIO73 = 31,
+    ROCKPI4_GPIO112 = 32,
+    ROCKPI4_GPIO76 = 33,
+    ROCKPI4_GPIO133 = 35,
+    ROCKPI4_GPIO132 = 36,
+    ROCKPI4_GPIO158 = 37,
+    ROCKPI4_GPIO134 = 38,
+    ROCKPI4_GPIO135 = 40
+} RockPi4;
 
 /**
  * MRAA return codes
